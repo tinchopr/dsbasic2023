@@ -30,6 +30,10 @@ df2 = df.copy()
 df_chaco = df2[df2['Provincia '] == "Chaco"]
 df_chaco = df_chaco[df_chaco['último año de realizacion']!='s/d']
 
-df3 = df
+#Columnas a usar
+columnas_a_usar = ['Departamento','Nombre','Tipo de gestion',
+                   'Tipo de gestión privado','Cantidad aprox de asistentes',
+                   'Tipo_Entrada','último año de realizacion']
 
-df3.iloc[0,2] = "PEPITO"
+#filtrar por las nuevas columnas
+df_chaco = df_chaco[columnas_a_usar]
